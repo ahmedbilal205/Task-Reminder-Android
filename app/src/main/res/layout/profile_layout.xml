@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:com.mikhaellopez="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/green_400"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/avatarIv"-->
+<!--                    android:layout_width="100dp"-->
+<!--                    android:layout_height="100dp"-->
+<!--                    android:src="@drawable/ic_task_old"-->
+<!--                    app:civ_shadow="true"-->
+<!--                    app:civ_shadow_radius="0dp"-->
+<!--                    app:civ_border="true"-->
+<!--                    app:civ_border_width="3dp" />-->
+                <ImageView
+                    android:id="@+id/avatarIv"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:visibility="visible"
+                    android:src="@drawable/ic_task_old"
+                     />
+
+                <TextView
+                    android:id="@+id/User_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="USERNAME"
+                    android:visibility="gone"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/User_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Email Address"
+                    android:visibility="gone"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_10" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_10" />
+
+            <RelativeLayout
+                android:id="@+id/about_rel_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:background="@color/grey_5">
+
+                <TextView
+                    android:id="@+id/about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="14dp"
+                    android:drawableStart="@drawable/work"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="2dp"
+                    android:text="@string/about_app"
+                    android:textColor="@color/grey_800"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/share_rel_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:background="@color/grey_5">
+
+                <TextView
+                    android:id="@+id/shareAndSend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="15dp"
+                    android:drawableStart="@drawable/ic_share"
+                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                    android:drawablePadding="13dp"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="2dp"
+                    android:text="@string/tell_a_friend"
+                    android:textColor="@color/grey_800"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rate_rel_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:background="@color/grey_5">
+
+                <TextView
+                    android:id="@+id/RateApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="14dp"
+                    android:drawableStart="@drawable/ic_rate"
+                    android:drawablePadding="14dp"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="2dp"
+                    android:text="@string/rate_app"
+                    android:textColor="@color/grey_800"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

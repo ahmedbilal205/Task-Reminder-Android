@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_5"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_400"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/welcomeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/grey_10"
+            android:textSize="27sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/currentDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_10"
+            android:textSize="17sp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/ic_search"
+            app:tint="@android:color/white" />
+
+        <EditText
+            android:id="@+id/SearchView"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:hint="Search For..."
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/grey_10">
+
+<!--            <requestFocus />-->
+
+        </EditText>
+
+    </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/TaskRecycler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="16dp"
+                tools:listitem="@layout/task_items" />
+
+            <TextView
+                android:id="@+id/endPage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TaskRecycler"
+                android:layout_marginTop="20dp"
+                android:text="@string/task_end"
+                android:textAlignment="center"
+                android:textColor="#9A9A9A"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/emptyRecView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/emptyRecitem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:drawableTop="@drawable/reycler_empty_icon"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/empty_rec_text"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey_800"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tip1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/emptyRecitem"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/tip1"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tip1"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/tip2"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/button_add_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom|end"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginBottom="25dp"
+                android:contentDescription="Fab"
+                android:src="@drawable/ic_add_black_24dp" />
+        </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="@color/grey_5">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Playing with my life"
+            android:layout_marginTop="10dp"
+            android:id="@+id/completedTasKTitle"
+            android:textSize="19sp"
+            android:fontFamily="sans-serif-black"/>
+
+        <TextView
+            android:id="@+id/completedTasKTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="13dp"
+            android:fontFamily="sans-serif-black"
+            android:text="12:23pm"
+            android:textColor="@color/green_400"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>
