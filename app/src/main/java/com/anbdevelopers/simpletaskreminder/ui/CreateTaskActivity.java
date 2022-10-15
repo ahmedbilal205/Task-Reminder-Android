@@ -201,10 +201,17 @@ public class CreateTaskActivity extends AppCompatActivity implements DatePickerD
         intent.putExtra (EXTRA_TITLE, title);
         intent.putExtra (EXTRA_DESC, des);
         intent.putExtra (EXTRA_TIME, time);
+        PendingIntent pendingIntent;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            pendingIntent = PendingIntent.getBroadcast (this,
+                    AlertReceiver.getID (),
+                    intent, PendingIntent.FLAG_MUTABLE);
+        }else{
+            pendingIntent = PendingIntent.getBroadcast (this,
+                    AlertReceiver.getID (),
+                    intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        }
 
-        PendingIntent pendingIntent = PendingIntent.getBroadcast (this,
-                AlertReceiver.getID (),
-                intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         AlarmManager alarmManager = (AlarmManager) getSystemService (ALARM_SERVICE);
         // start alarm if the selected time is not before the current time
